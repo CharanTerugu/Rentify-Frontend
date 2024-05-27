@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="login-component.component.css">
+    </head>
+    <body>
+        <h2 style="font-style: italic;"> {{this.msg}}</h2>
+        <app-nav-bar></app-nav-bar>
+       
+<div class="container">
+    <form>
+    <label for="name">User Name</label>
+    <div >
+    <input type="text" name="firstName" [(ngModel)]="user.firstName"  >
+    </div>
+
+    
+    <label for="password" name="password" >Password</label>
+    <div >
+    <input type="text" name="password" [(ngModel)]="user.password" >
+    
+</div>
+<br>
+<input type="submit" (click)="submit()" >
+ 
+</form>
+
+
+   </div>
+</body>
+
+</html>

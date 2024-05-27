@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    
+    <form>
+        {{this.msg}}
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" [(ngModel)]="signup.firstName">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" [(ngModel)]="signup.lastName">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" [(ngModel)]="signup.email">
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" name="phoneNumber" [(ngModel)]="signup.phoneNumber">
+
+        <label for="roles">Roles</label>
+        <input type="text" name="roles" [(ngModel)]="signup.roles">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" [(ngModel)]="signup.password">
+
+        <button type="submit" (click)="submit()">Submit</button>
+    </form>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="container">
+  <label for="bedroomsFilter">Minimum Bedrooms:</label>
+    <select id="bedroomsFilter" [(ngModel)]="selectedBedrooms " (change)="applyFilter()">
+        <option value="1">1</option> 
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <div *ngIf="properties" class="property-list">
+      <h2>Properties</h2>
+      <ul>
+        <li *ngFor="let property of properties">
+          <strong>Place:</strong> {{ property.place }}<br>
+          <strong>Area:</strong> {{ property.area }}<br>
+          <strong>No. of Bedrooms:</strong> {{ property.noOfBedrooms }}<br>
+          <strong><button [style.background-color]="'blue'" (click)="updateLikes(property.id)">Like:</button></strong> {{ property.likes }}<br>
+          <strong><button [style.background-color]="'green'" (click)="Intrested(property.id)">Intrested</button></strong>
+          <hr>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="details">
+      <h2>User Details</h2>
+      <p><strong>Name:</strong> {{ details.firstName}}</p>
+      <p><strong>LastName:</strong> {{details.lastName }}</p>
+      <p><strong>Phone Number:</strong> {{details.phoneNumber }}</p>
+      <p><strong>Email:</strong> {{details.email }}</p>
+
+    </div>
+  </div>

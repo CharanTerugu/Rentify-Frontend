@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngIf="properties" class="property-list">
+      {{msg}}
+      <h2>Properties</h2>
+      <ul>
+        <li *ngFor="let property of properties">
+          <strong>Place:</strong> {{ property.place }}<br>
+          <strong>Area:</strong> {{ property.area }}<br>
+          <strong>No. of Bedrooms:</strong> {{ property.noOfBedrooms }}<br>
+          <strong>Likes:</strong> {{ property.likes }}<br>
+          <strong><button (click)="delete(property.id)">Delete</button></strong>
+          <strong><button routerLink="/user/update/{{property.id}}">update</button></strong>
+          
+          <hr>
+          
+      
+        </li>
+      </ul>
+    </div>
+  </div>
+  
