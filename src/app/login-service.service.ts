@@ -9,7 +9,7 @@ import { signup } from './signup-component/signup';
   providedIn: 'root'
 })
 export class LoginServiceService {
-  baseurl="http://rentifyservices-tag.onrender.com";
+  baseurl="https://rentifyservices-tag.onrender.com";
 
   constructor(private httpclient:HttpClient,private router:Router) { }
 

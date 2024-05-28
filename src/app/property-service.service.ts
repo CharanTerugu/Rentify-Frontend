@@ -11,7 +11,7 @@ import { UserDetails } from './view-all-properties/UserDetails';
 export class PropertyServiceService {
 
  
-  baseurl="http://rentifyservices-tag.onrender.com";
+  baseurl="https://rentifyservices-tag.onrender.com";
   constructor(private httpclient:HttpClient,private router:Router) { }
 
 registerProperty(property:Property):Observable<any>{
